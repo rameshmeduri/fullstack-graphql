@@ -1,0 +1,36 @@
+{
+  "user": {
+    "id": "jBWMVGjm50l6LGwepDoty",
+    "username": "rameshmeduri"
+  },
+  "pet": [
+    {
+      "id": "JskiuBI2_5Z6VA0R4F9rR",
+      "createdAt": 1607269620658,
+      "name": "dog",
+      "type": "DOG",
+      "user": "jBWMVGjm50l6LGwepDoty"
+    },
+    {
+      "id": "9HObycfxobWEsH8tBGmLP",
+      "createdAt": 1607269715585,
+      "name": "timoune",
+      "type": "CAT",
+      "user": "jBWMVGjm50l6LGwepDoty"
+    },
+    {
+      "id": "2LzlgI9JWPVM65XwXY8ZG",
+      "createdAt": 1607269729635,
+      "name": "bob",
+      "type": "CAT",
+      "user": "jBWMVGjm50l6LGwepDoty"
+    },
+    {
+      "id": "lYGkol931kkUZvOGg-LYV",
+      "createdAt": 1607882357326,
+      "name": "sdf",
+      "type": "DOG",
+      "user": "jBWMVGjm50l6LGwepDoty"
+    }
+  ]
+}
