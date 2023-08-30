@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import gql from "graphql-tag";
-import PetBox from "../components/PetBox";
-import NewPet from "../components/NewPet";
-import { useQuery, useMutation } from "@apollo/react-hooks";
-import Loader from "../components/Loader";
+import React, { useState } from 'react';
+import gql from 'graphql-tag';
+import PetBox from '../components/PetBox';
+import NewPet from '../components/NewPet';
+import { useQuery, useMutation } from '@apollo/react-hooks';
+import Loader from '../components/Loader';
 
 const PET_DETAILS = gql`
   fragment PetDetails on Pet {
@@ -43,9 +43,9 @@ export default function Pets() {
 
       cache.writeQuery({
         query: GET_PETS,
-        data: { pets: [addPet, ...pets] },
+        data: { pets: [addPet, ...pets] }
       });
-    },
+    }
   });
 
   if (pets.loading) return <Loader />;
@@ -57,22 +57,22 @@ export default function Pets() {
       variables: { input },
 
       optimisticResponse: {
-        __typename: "Mutation",
+        __typename: 'Mutation',
         addPet: {
-          __typename: "Pet",
-          id: Math.round(Math.random() * -1000000) + "",
+          __typename: 'Pet',
+          id: Math.round(Math.random() * -1000000) + '',
           type: input.type,
           name: input.name,
-          img: "https://via.placeholder.com/300",
-          vacinated: true,
-        },
-      },
+          img: 'https://via.placeholder.com/300',
+          vacinated: true
+        }
+      }
     });
   };
 
-  console.log("pets", pets.data);
+  console.log('pets', pets.data);
   const petsList = pets.data.pets.map((pet) => {
-    console.log("pet.id", pet.id);
+    console.log('pet.id', pet.id);
     return (
       <div className="col-xs-12 col-md-4 col" key={pet.id}>
         <div className="box">

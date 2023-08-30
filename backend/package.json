@@ -1,7 +1,12 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
+  "name": "backend",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "node api/src/server.js",
+    "app": "parcel client/index.html --out-dir client/dist",
+    "test-server": "jest api/tests",
+    "format": "prettier --write \"src/**/*.{js,json}\""
+  },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.2",
     "apollo-cache-inmemory": "^1.6.3",
@@ -23,11 +28,6 @@
     "react-router-dom": "^5.1.2",
     "react-select": "^3.0.8",
     "react-spinners": "^0.6.1"
-  },
-  "scripts": {
-    "server": "node api/src/server.js",
-    "app": "parcel client/index.html --out-dir client/dist",
-    "test-server": "jest api/tests"
   },
   "browserslist": {
     "production": [
