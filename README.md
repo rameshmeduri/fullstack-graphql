@@ -13,7 +13,7 @@ npm run server
 ## install and start frontend
 
 ```
-cd frontend/react-client
+cd frontend
 npm install
 npm start
 ```
